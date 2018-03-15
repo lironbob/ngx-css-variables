@@ -1,7 +1,7 @@
 {
   "name": "ngx-css-variables",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Css variables module for Angular 2/4/5",
   "main": "./bundles/ngx-css-variables.umd.js",
   "module": "./esm5/ngx-css-variables.js",
@@ -44,18 +44,17 @@
     "tslib": "^1.7.1"
   },
   "peerDependencies": {
-    "@angular/common": ">= 5.0.0",
-    "@angular/core": ">= 5.0.0"
+    "@angular/common": ">= 2.4.0",
+    "@angular/core": ">= ^2.4.0"
   },
   "devDependencies": {
-    "@angular/animations": "5.0.0",
-    "@angular/common": "5.0.0",
-    "@angular/compiler": "5.0.0",
-    "@angular/compiler-cli": "5.0.0",
-    "@angular/core": "5.0.0",
-    "@angular/platform-browser": "5.0.0",
-    "@angular/platform-browser-dynamic": "5.0.0",
-    "@angular/platform-server": "5.0.0",
+    "@angular/common": "^2.4.0",
+    "@angular/compiler": "^2.4.0",
+    "@angular/compiler-cli": "^2.4.0",
+    "@angular/core": "^2.4.0",
+    "@angular/platform-browser": "^2.4.0",
+    "@angular/platform-browser-dynamic": "^2.4.0",
+    "@angular/platform-server": "^2.4.0",
     "@compodoc/compodoc": "1.0.3",
     "@types/jasmine": "2.6.2",
     "@types/node": "8.0.47",
