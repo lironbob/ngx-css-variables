@@ -1,7 +1,7 @@
 {
   "name": "ngx-css-variables",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Css variables module for Angular 2/4/5",
   "main": "./bundles/ngx-css-variables.umd.js",
   "module": "./esm5/ngx-css-variables.js",
