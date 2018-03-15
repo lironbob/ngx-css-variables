@@ -55,7 +55,7 @@ export class CustomComponent {
 }
 ```
 
-## Use css-vars service to effect the ':root' selector 
+## Set global css variables with css-vars service 
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
