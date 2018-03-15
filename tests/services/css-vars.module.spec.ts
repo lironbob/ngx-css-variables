@@ -1,32 +1,28 @@
-import {inject, TestBed} from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
+import {CssVarsModule} from '../../src/css-vars/css-vars.module';
+import {CssVarsService} from '../../src/css-vars/service/css-vars.service';
+import {CssVars} from '../../src/css-vars/types';
+import {Component} from '@angular/core';
 
-import {CssVarsService} from './../../src/css-vars-module';
+@Component({
+  template: `
+      <div [css-vars]="cssVars"></div>`
+})
+class TestDummyComponent {
+  public cssVars: CssVars = {
+    '--background': '#000'
+  };
+}
 
-describe('CssVarsService', () => {
+describe('Module: CssVars', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [
-        CssVarsService
-      ]
+      imports: [CssVarsModule.forRoot()]
     });
   });
 
-  it('should return :root style with single variable',
-    inject([CssVarsService],
-      (cssVarsService: CssVarsService) => {
-        expect(cssVarsService.setVariables({'--background': '#000'})).toBe(':root {--background: #000}');
-      })
-  );
-
-  it('should return :root style with two variables',
-    inject([CssVarsService],
-      (cssVarsService: CssVarsService) => {
-        expect(cssVarsService.setVariables({
-          '--background': '#000',
-          '--text-size': '14px'
-        })).toBe(':root {--background: #000; --text-size: 14px}');
-      })
-  );
-
+  it(`should provide CssVars service`, () => {
+    expect(TestBed.get(CssVarsService)).toBeTruthy();
+  });
 });

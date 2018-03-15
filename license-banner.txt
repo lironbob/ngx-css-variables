@@ -1,0 +1,4 @@
+/**
+ * @license ngx-css-variables
+ * MIT license
+ */

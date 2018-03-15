@@ -1,0 +1,9 @@
+$ cat .gitignore
+.idea
+/node_modules
+/dist
+/documentation
+/coverage
+
+*.log
+*.tgz
