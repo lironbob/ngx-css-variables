@@ -14,11 +14,24 @@ class TestDummyComponent {
   };
 }
 
-describe('Module: CssVars', () => {
+describe('Module: CssVars forRoot', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [CssVarsModule.forRoot()]
+    });
+  });
+
+  it(`should provide CssVars service`, () => {
+    expect(TestBed.get(CssVarsService)).toBeTruthy();
+  });
+});
+
+describe('Module: CssVars forChild', () => {
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [CssVarsModule.forChild()]
     });
   });
 

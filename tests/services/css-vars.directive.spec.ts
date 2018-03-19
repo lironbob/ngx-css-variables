@@ -9,14 +9,13 @@ import {CssVars} from '../../src/css-vars/types';
       <div [css-vars]="cssVars"></div>`
 })
 class TestDummyComponent {
-  public cssVars: CssVars = {
-    '--background': '#000'
-  };
+  public cssVars: CssVars;
 }
 
 
 describe('Directive: CssVars', () => {
 
+  let component: TestDummyComponent;
   let fixture: ComponentFixture<TestDummyComponent>;
   let divEl: DebugElement;
 
@@ -25,6 +24,7 @@ describe('Directive: CssVars', () => {
       declarations: [TestDummyComponent, CssVarsDirective]
     }).compileComponents().then(() => {
       fixture = TestBed.createComponent(TestDummyComponent);
+      component = fixture.componentInstance;
       divEl = fixture.debugElement.query(By.directive(CssVarsDirective));
     });
   }));
@@ -34,7 +34,15 @@ describe('Directive: CssVars', () => {
   });
 
   it(`should add '--background-color' css variable with '#000' as value to the dummy component`, () => {
+    component.cssVars = {
+      '--background': '#000'
+    };
     fixture.detectChanges();
     expect(getComputedStyle(divEl.nativeElement).getPropertyValue('--background')).toBe('#000');
+  });
+
+  it(`shouldn't add css variables to the dummy component`, () => {
+    fixture.detectChanges();
+    expect(getComputedStyle(divEl.nativeElement).getPropertyValue('--background')).toBe('');
   });
 });
