@@ -1,3 +1,5 @@
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/lironbob/ngx-css-variables/blob/master/LICENSE.md)
+
 # ngx-css-variables
 This is the repository for ngx-css-variables.
 
@@ -83,3 +85,33 @@ The ngx-css-variables input parameters are displayed below.
 | Input | Required | Details |
 | ---- | ---- | ---- |
 | css-vars | Required | CssVars type - css key value object  |
+
+## Contributing
+
+* Before adding any new feature or a fix make sure to open an issue first!
+
+Make sure you have `angular-cli` & `karma` installed globally.
+
+```bash
+$ npm install -g angular-cli karma
+```
+
+Clone the project, and install dependencies.
+
+```bash
+$ git clone https://github.com/lironbob/ngx-css-variables.git
+$ npm install
+```
+
+Create a new branch
+
+```bash
+$ git checkout -b feat/someFeature
+```
+
+Add tests & make sure everything is running properly
+```bash
+$ npm test
+```
+
+Commit & push, and make a pull request!
